@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Text(
-                  "${userData.fullName} ",
+                  "Welcome ${userData.fullName} ! ",
                   style: const TextStyle(
                     fontSize: 27,
                     fontWeight: FontWeight.w800,
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: ExerciseCard(
                         title: "Warmup",
-                        imageUrl: "assets/images/exercises/cobra.png",
+                        imageUrl: "assets/images/exercises/triangle.png",
                         description: "see more..",
                       ),
                     ),
@@ -113,52 +113,52 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 15),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ExerciseDetailsPage(
-                              exerciseTitle: "Exercises",
-                              exerciseDescription:
-                                  "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
-                              exerciseList: exerciseList,
-                            ),
-                          ),
-                        );
-                      },
-                      child: ExerciseCard(
-                        title: "Exercises",
-                        imageUrl: "assets/images/exercises/triangle.png",
-                        description: "see more..",
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ExerciseDetailsPage(
-                              exerciseTitle: "Streching",
-                              exerciseDescription:
-                                  "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
-                              exerciseList: exerciseList,
-                            ),
-                          ),
-                        );
-                      },
-                      child: ExerciseCard(
-                        title: "Streching",
-                        imageUrl: "assets/images/exercises/yoga.png",
-                        description: "see more..",
-                      ),
-                    ),
-                  ],
-                ),
+                // SizedBox(height: 15),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     GestureDetector(
+                //       onTap: () {
+                //         Navigator.push(
+                //           context,
+                //           MaterialPageRoute(
+                //             builder: (context) => ExerciseDetailsPage(
+                //               exerciseTitle: "Exercises",
+                //               exerciseDescription:
+                //                   "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                //               exerciseList: exerciseList,
+                //             ),
+                //           ),
+                //         );
+                //       },
+                //       child: ExerciseCard(
+                //         title: "Exercises",
+                //         imageUrl: "assets/images/exercises/triangle.png",
+                //         description: "see more..",
+                //       ),
+                //     ),
+                //     GestureDetector(
+                //       onTap: () {
+                //         Navigator.push(
+                //           context,
+                //           MaterialPageRoute(
+                //             builder: (context) => ExerciseDetailsPage(
+                //               exerciseTitle: "Streching",
+                //               exerciseDescription:
+                //                   "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                //               exerciseList: exerciseList,
+                //             ),
+                //           ),
+                //         );
+                //       },
+                //       child: ExerciseCard(
+                //         title: "Streching",
+                //         imageUrl: "assets/images/exercises/yoga.png",
+                //         description: "see more..",
+                //       ),
+                //     ),
+                //   ],
+                // ),
               ],
             ),
           ),
