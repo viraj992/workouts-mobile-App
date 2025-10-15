@@ -9,31 +9,32 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(
-            vertical: 24.0,
-            horizontal: 24,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 231, 230, 230),
           ),
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Image.asset(
                 "assets/images/exercises/welcome.png",
                 width: double.infinity,
-                height: 400,
-                fit: BoxFit.cover,
+                height: 380,
+                fit: BoxFit.contain,
               ),
-              const Text(
-                "Welcome to Workout Planner 💪",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              Text(
+                "Make Your Body \nHealthy & Fit",
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 20),
-              const Text(
-                "Plan your workouts, track progress, and stay fit every day!",
+              Text(
+                "Plan your workouts, track progress, \nand stay fit every day!",
+                style: TextStyle(fontSize: 17, color: Colors.black),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 45),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushReplacement(
@@ -43,7 +44,28 @@ class WelcomePage extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Text("Get Started"),
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(vertical: 13, horizontal: 32),
+                  backgroundColor: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      "Get Started",
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Icon(Icons.arrow_forward, color: Colors.white, size: 27),
+                  ],
+                ),
               ),
             ],
           ),
